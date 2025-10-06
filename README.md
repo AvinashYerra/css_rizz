@@ -4,6 +4,10 @@
 
 *Does your CSS have rizz? This tool will tell you if your CSS is slaying or if it's giving basic.*
 
+## 🌐 Live Demo
+
+**Try it now:** [https://css-rizz-xvqw.onrender.com/](https://css-rizz-xvqw.onrender.com/)
+
 ## Features 🔥
 
 - **GitHub Repository Analysis**: Drop your GitHub repo URL and we'll handle the rest (it's giving smart)
