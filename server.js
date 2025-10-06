@@ -5,19 +5,16 @@ const yauzl = require('yauzl');
 const fs = require('fs');
 const path = require('path');
 const { parse } = require('postcss');
-const valueParser = require('postcss-value-parser');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Environment configuration
-const NODE_ENV = process.env.NODE_ENV || 'development';
-const MAX_FILE_SIZE = process.env.MAX_FILE_SIZE || '50mb';
-
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static('.'));
+// Serve all static files (HTML, JS, CSS) from root
+app.use(express.static(path.join(__dirname)));
+
 
 // Baseline data for CSS features
 const baselineData = {
@@ -424,10 +421,10 @@ app.post('/analyze', async (req, res) => {
     }
 });
 
-// Serve the main page
-app.get('/', (req, res) => {
+// Catch-all to serve index.html for any route (useful if frontend uses routing)
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
-});
+  });
 
 app.listen(PORT, () => {
     console.log(`CSS Baseline Analyzer running on http://localhost:${PORT}`);

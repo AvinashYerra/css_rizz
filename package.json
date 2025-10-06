@@ -8,18 +8,25 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
     "cors": "^2.8.5",
+    "express": "^4.18.2",
     "multer": "^1.4.5-lts.1",
-    "yauzl": "^2.10.0",
     "node-fetch": "^2.6.7",
     "postcss": "^8.4.31",
-    "postcss-value-parser": "^4.2.0"
+    "yauzl": "^2.10.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
-  "keywords": ["css", "rizz", "gen-z", "slay", "web-features", "github", "rating"],
+  "keywords": [
+    "css",
+    "rizz",
+    "gen-z",
+    "slay",
+    "web-features",
+    "github",
+    "rating"
+  ],
   "author": "",
   "license": "MIT"
 }
